@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<?php
+require 'includes/layouts/main-header.php';
+?>
 
-  </body>
-</html>
+<section class="container">
+  <div class="sidebar">
+    <div class="sidebar-card">
+
+      <h4>Trending topics -</h4>
+        <ul>
+          <li>
+            <a href="#">Front-end</a>
+          </li>
+          <li>
+            <a href="#">Back-end</a>
+          </li>
+        </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>All topics -</h4>
+        <ul>
+          
+          <li>
+            <a href="#">Front-end</a>
+          </li>
+            <li>
+              <a href="#">Back-end</a>
+            </li>
+            <li>
+              <a href="#">JavaScript</a>
+            </li>
+            <li>
+              <a href="#">PHP</a>
+            </li>
+            <li>
+              <a href="#">C++</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="thread-container">
+        <?php
+        for ($i=0; $i < 5; $i++) {
+          echo '
+        <div class="thread-card">
+
+          <h4>thread Title.</h4>
+          <p>@threaduser - 00-00-0000 00-00.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <br>
+
+          <a class="btn" href="#">See post.</a>
+
+          <br>
+
+        </div>
+        ';
+      }
+        ?>
+      </div>
+
+    </section>
+
+<?php
+require 'includes/layouts/footer.php';
+?>

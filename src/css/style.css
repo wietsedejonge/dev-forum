@@ -1,4 +1,143 @@
+:root {
+  --bg-color-main: #eeeeee;
+
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  --txt-color-main: #232931;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: var(--bg-color-main);
+  color: var(--txt-color-main);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+ul, li, a {
+  background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6, p, b {
+  color: inherit;
+  background-color: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15%;
+}
+
+header a {
+  font-family: ;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--txt-color-main);
+}
+
+header input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--txt-color-main);
+  padding: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  font-size: 15px;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.container {
+  margin: 20px 15%;
+
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-areas:
+    "sidebar" "thread-card"
+    "thread-card" "thread-card";
+}
+
+.container .sidebar .sidebar-card {
+  padding: 20px;
+  margin: 20px;
+
+  width: 85%;
+  height: inherit;
+
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color-main);
+}
+
+.container .thread-card {
+  margin: 20px;
+  padding: 20px;
+
+  width: 95%;
+
+  /* display: grid;
+  grid-column: 1fr;
+  grid-row: 1fr; */
+
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color-main);
+}
+
+.sidebar ul {
+  list-style: square;
+  padding: 10px;
+  background-color: transparent;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 10px 15px;
+  margin: 20px 0 20px 0;
+
+  text-decoration: none;
+
+  background-color: var(--txt-color-main);
+  box-shadow: var(--box-shadow);
+  color: var(--bg-color-main);
+
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--bg-color-main);
+  color: var(--txt-color-main);
+}
+
+footer {
+  margin: 20px 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  margin: 0 5px;
 }
