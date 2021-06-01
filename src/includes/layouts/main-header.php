@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -13,7 +14,7 @@
   </head>
   <body>
     <header>
-      <h4><i class="bi bi-code"></i> dev-forum</h4>
+      <span> <i class="bi bi-code"></i> dev-forum</span>
 
       <label>
         <i class="bi bi-search"></i> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -25,15 +26,15 @@
         <ul class="nav-links">
 
           <li>
-            <a href="#">Home</a>
+            <a class="underline-hover" href="index">Home.</a>
           </li>
 
           <li>
-            <a href="#">Threads</a>
+            <a class="underline-hover" href="#">Threads.</a>
           </li>
 
           <li>
-            <a class="btn" href="#">Login</a>
+            <a class="btn-secondary" href="login">Login.</a>
           </li>
         </ul>
 
