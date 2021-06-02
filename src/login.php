@@ -6,7 +6,7 @@ require 'includes/layouts/main-header.php';
   <div class="login-card">
 
     <h4>Login.</h4>
-    <p>This where you login.</p>
+    <p>Log in to your account.</p>
 
     <form class="" action="#" method="post">
       <label>
@@ -17,17 +17,15 @@ require 'includes/layouts/main-header.php';
         <input class="input" type="password" name="" value="" placeholder="Password">
       </label>
 
+      <label>
+        <input type="checkbox" name="" value=""> Remember me.
+      </label>
+
+      <br>
+
+      <button class="btn blue" type="button" name="button"><b>Login.</b></button>
+
     </form>
-
-    <br>
-
-    <label>
-      <input type="checkbox" name="" value=""> Remember me.
-    </label>
-
-    <br>
-
-    <button class="btn blue" type="button" name="button"><b>Login.</b></button>
 
   </div>
 </div>
