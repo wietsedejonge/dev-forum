@@ -1,15 +1,16 @@
 :root {
-  --bg-color-main: #eeeeee;
+  --bg-color-main: white;
+  --bg-color-secondary: #f5f9ff;
 
-  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-  --txt-color-main: #232931;
+  --txt-color-main: #021f4f;
+  --txt-color-secondary: #1669f0;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 14px;
   background-color: var(--bg-color-main);
   color: var(--txt-color-main);
   font-family: 'Poppins', sans-serif;
@@ -21,7 +22,7 @@ body {
   flex-direction: column;
 }
 
-ul, li, a {
+ul, li, a, form, label{
   background-color: transparent;
 }
 
@@ -29,6 +30,8 @@ h1, h2, h3, h4, h5, h6, p, b {
   color: inherit;
   background-color: transparent;
 }
+
+/* font ruleset. */
 
 p {
     font-size: 14px;
@@ -50,9 +53,25 @@ p {
     color: var(--main-txt-color);
 }
 
+.blue {
+  color: var(--main-txt-color);
+}
+
+span {
+  font-size: 20px;
+}
+
 a {
     font-size: 14px;
     color: var(--main-txt-color);
+}
+
+b {
+  color: var(--txt-color-secondary);
+}
+
+.bi-colored {
+  color: var(--txt-color-secondary);
 }
 
 button {
@@ -60,33 +79,35 @@ button {
     border: none;
 
     font-size: 14px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
 
 h5 {
     font-size: 14px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
 
 h4 {
     font-size: 20px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
 
 h3 {
     font-size: 28px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
 
 h2 {
     font-size: 40px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
 
 h1 {
     font-size: 56px;
-    color: var(--main-txt-color);
+    color: var(--txt-color-secondary);
 }
+
+/* navbar */
 
 header {
   display: flex;
@@ -123,6 +144,8 @@ header input {
   position: relative;
 }
 
+/* front-page */
+
 .container {
   margin: 20px 15%;
 
@@ -143,7 +166,7 @@ header input {
   border-radius: 15px;
 
   box-shadow: var(--box-shadow);
-  background-color: var(--bg-color-main);
+  background-color: var(--bg-color-secondary);
 }
 
 .container .thread-card {
@@ -155,24 +178,52 @@ header input {
   border-radius: 15px;
 
   box-shadow: var(--box-shadow);
-  background-color: var(--bg-color-main);
+  background-color: var(--bg-color-secondary);
 }
 
 .sidebar ul {
   list-style: square;
+  list-style-position: inside;
+  color: var(--txt-color-main);
   padding: 10px;
   background-color: transparent;
 }
+
+/* buttons and hover animations */
 
 ul li a {
   text-decoration: none;
 }
 
-ul li a:hover {
+.underline-hover {
+  text-decoration: none;
+}
+
+.underline-hover:hover {
   text-decoration: underline;
 }
 
 .btn {
+  padding: 10px 15px;
+  margin: 20px 10px 0 0;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  background-color: var(--bg-color-main);
+  box-shadow: var(--box-shadow);
+  color: var(--txt-color-secondary);
+
+  transition: 0.4s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--bg-color-secondary);
+}
+
+.btn-secondary {
   padding: 10px 15px;
   margin: 20px 0 20px 0;
 
@@ -180,17 +231,63 @@ ul li a:hover {
 
   text-decoration: none;
 
-  background-color: var(--txt-color-main);
+  background-color: var(--bg-color-secondary);
   box-shadow: var(--box-shadow);
-  color: var(--bg-color-main);
+  color: var(--txt-color-secondary);
 
   transition: 0.4s;
 }
 
-.btn:hover {
+.btn-secondary:hover {
   background-color: var(--bg-color-main);
+  color: var(--txt-color-secondary);
+}
+
+.icon-hover {
   color: var(--txt-color-main);
 }
+
+.icon-hover:hover {
+  color: var(--txt-color-secondary);
+}
+
+/* login / register page */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+
+  margin: 20px 15%;
+}
+
+.login-container .login-card {
+  margin: 20px;
+  padding: 20px;
+  justify-content: left;
+
+  width: 250px;
+
+  border-radius: 15px;
+
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color-secondary);
+}
+
+.login-container .login-card .input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--txt-color-main);
+
+  width: 90%;
+
+  padding: 5px;
+  margin: 10px;
+  background-color: transparent;
+}
+
+/* footer */
 
 footer {
   margin: auto 15% 20px 15%;
